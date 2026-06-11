@@ -1,0 +1,289 @@
+===== nuxt-project-structure.txt =====
+
+NUXT PROJECT STRUCTURE
+Plaza Dental Clinic
+Framework: Nuxt 4 (app/ directory)
+Version: 1.0
+Prepared by: Timeframe Solutions
+
+════════════════════════════════════════════════════════════════
+ROOT
+════════════════════════════════════════════════════════════════
+
+plaza-dental/
+├── .env                              # Environment variables (gitignored)
+├── .env.example                      # Template for env vars
+├── .gitignore
+├── .nuxtignore
+├── README.md
+├── nuxt.config.ts                    # Nuxt 4 config (modules, runtimeConfig, seo)
+├── tailwind.config.ts                # Tailwind v4 config + design tokens
+├── tsconfig.json
+├── package.json
+└── vercel.json                       # Vercel deployment config
+
+════════════════════════════════════════════════════════════════
+APP DIRECTORY  (Nuxt 4 — all source lives here)
+════════════════════════════════════════════════════════════════
+
+app/
+│
+├── app.vue                           # Root component — NuxtLayout + NuxtPage
+│
+├── error.vue                         # Global error boundary page
+│
+│
+├── ── ASSETS ──────────────────────────────────────────────────
+│
+├── assets/
+│   ├── css/
+│   │   ├── main.css                  # Tailwind base + custom global styles
+│   │   └── fonts.css                 # Self-hosted Inter via @nuxtjs/fontaine
+│   │
+│   ├── images/
+│   │   ├── logo.svg                  # Plaza Dental SVG logo (dark variant)
+│   │   ├── logo-white.svg            # White variant for dark backgrounds
+│   │   ├── hero-bg.webp              # Hero background — dentist + patient
+│   │   ├── about-team.webp           # About page team photo
+│   │   ├── clinic-interior-1.webp    # Clinic imagery #1
+│   │   ├── clinic-interior-2.webp    # Clinic imagery #2
+│   │   ├── clinic-interior-3.webp    # Clinic imagery #3
+│   │   ├── og-default.jpg            # Open Graph fallback image (1200×630)
+│   │   └── favicon.ico
+│   │
+│   └── icons/
+│       ├── service-general.svg
+│       ├── service-whitening.svg
+│       ├── service-implants.svg
+│       ├── service-braces.svg
+│       ├── service-rootcanal.svg
+│       ├── service-veneers.svg
+│       ├── service-cleaning.svg
+│       ├── service-children.svg
+│       ├── feature-equipment.svg
+│       ├── feature-team.svg
+│       ├── feature-comfort.svg
+│       ├── feature-pricing.svg
+│       ├── whatsapp.svg
+│       └── star.svg
+│
+│
+├── ── COMPONENTS ───────────────────────────────────────────────
+│
+├── components/
+│   │
+│   ├── layout/
+│   │   ├── AppHeader.vue             # Sticky nav, mobile drawer, Book CTA
+│   │   ├── AppFooter.vue             # Links, contact, social, legal
+│   │   └── MobileDrawer.vue          # Slide-down mobile nav drawer
+│   │
+│   ├── global/
+│   │   ├── AppointmentModal.vue      # Universal booking modal
+│   │   ├── WhatsAppButton.vue        # Fixed bottom-right floating CTA
+│   │   ├── CookieBanner.vue          # GDPR consent banner (bottom)
+│   │   ├── PageHero.vue              # Shared compact hero (inner pages)
+│   │   └── CtaBanner.vue             # Shared teal CTA strip (bottom of pages)
+│   │
+│   ├── home/
+│   │   ├── HeroSection.vue           # Full-width hero with CTA
+│   │   ├── QuickInfoBar.vue          # 3-card info strip below hero
+│   │   ├── TrustIndicators.vue       # 4 stats (patients, years, etc.)
+│   │   ├── AboutPreview.vue          # Our Story teaser + images
+│   │   ├── ServicesPreview.vue       # 6 service cards grid
+│   │   ├── WhyChooseUs.vue           # 4 feature cards
+│   │   ├── GalleryPreview.vue        # 3 before/after pairs
+│   │   └── TestimonialsSection.vue   # 3 testimonial cards / carousel
+│   │
+│   ├── services/
+│   │   ├── ServicesGrid.vue          # All 8 service cards (detailed)
+│   │   └── ServiceCard.vue           # Individual service card atom
+│   │
+│   ├── gallery/
+│   │   ├── BeforeAfterGallery.vue    # Full gallery with filter tabs
+│   │   ├── BeforeAfterSlider.vue     # Single before/after image slider
+│   │   └── GalleryLightbox.vue       # Fullscreen lightbox overlay
+│   │
+│   ├── about/
+│   │   ├── OurStory.vue              # Founding story + mission + values
+│   │   ├── MissionValues.vue         # 3 pillar cards (icon + title + desc)
+│   │   ├── TeamGrid.vue              # Doctor cards grid
+│   │   ├── TeamCard.vue              # Individual doctor card atom
+│   │   └── AwardsStrip.vue           # Awards / recognition logos
+│   │
+│   ├── implants/
+│   │   ├── ImplantsExplainer.vue     # What are implants — text + image
+│   │   ├── ImplantsBenefits.vue      # 4-card benefits grid
+│   │   └── ImplantsProcess.vue       # 5-step numbered timeline
+│   │
+│   ├── braces/
+│   │   ├── BracesTypes.vue           # Metal / Ceramic / Clear Aligners cards
+│   │   ├── BracesBenefits.vue        # 4-card benefits grid
+│   │   └── BracesTimeline.vue        # Treatment step timeline
+│   │
+│   ├── forms/
+│   │   ├── ContactForm.vue           # Inline contact/booking form (Contact page)
+│   │   └── AppointmentForm.vue       # Shared form fields (used in modal too)
+│   │
+│   ├── ui/
+│   │   ├── BaseButton.vue            # Primary / secondary / ghost variants
+│   │   ├── SectionLabel.vue          # Pill eyebrow label ("Our Services")
+│   │   ├── StarRating.vue            # Star rating display (1–5)
+│   │   ├── AccordionItem.vue         # Single FAQ accordion row
+│   │   ├── AccordionGroup.vue        # FAQ accordion wrapper
+│   │   └── SocialIcons.vue           # Instagram / Facebook / WhatsApp icons
+│   │
+│   └── seo/
+│       ├── SchemaLocalBusiness.vue   # LocalBusiness + Dentist JSON-LD
+│       └── SchemaBreadcrumb.vue      # BreadcrumbList JSON-LD
+│
+│
+├── ── PAGES ────────────────────────────────────────────────────
+│
+├── pages/
+│   ├── index.vue                     # / — Home
+│   ├── services.vue                  # /services — Services + Gallery
+│   ├── dental-implants.vue           # /dental-implants
+│   ├── braces.vue                    # /braces
+│   ├── about.vue                     # /about
+│   ├── contact.vue                   # /contact
+│   ├── privacy-policy.vue            # /privacy-policy (static)
+│   ├── terms.vue                     # /terms (static)
+│   └── [...slug].vue                 # 404 catch-all → error page
+│
+│
+├── ── LAYOUTS ──────────────────────────────────────────────────
+│
+├── layouts/
+│   ├── default.vue                   # AppHeader + slot + AppFooter + globals
+│   └── minimal.vue                   # Header only (used for legal pages)
+│
+│
+├── ── COMPOSABLES ──────────────────────────────────────────────
+│
+├── composables/
+│   ├── useAppointmentModal.ts        # Modal open/close state (useState)
+│   ├── useCookieConsent.ts           # Cookie banner state + GA opt-in logic
+│   ├── useContactForm.ts             # Form submit, validation, loading state
+│   └── useGalleryLightbox.ts         # Lightbox open/close + active image
+│
+│
+├── ── SERVER ───────────────────────────────────────────────────
+│
+├── server/
+│   ├── api/
+│   │   └── contact.post.ts           # POST /api/contact → Resend email
+│   │
+│   └── middleware/
+│       └── rate-limit.ts             # Basic rate limiting for /api/contact
+│
+│
+├── ── DATA ─────────────────────────────────────────────────────
+│
+├── data/
+│   ├── services.ts                   # All 8 services (id, name, desc, icon, slug)
+│   ├── testimonials.ts               # Patient testimonials array
+│   ├── team.ts                       # Doctor profiles (name, title, bio, photo)
+│   ├── faqs.ts                       # FAQ groups by page (general, implants, braces)
+│   └── gallery.ts                    # Before/after image pairs + categories
+│
+│
+├── ── TYPES ────────────────────────────────────────────────────
+│
+├── types/
+│   ├── service.ts                    # Service interface
+│   ├── testimonial.ts                # Testimonial interface
+│   ├── team.ts                       # TeamMember interface
+│   ├── faq.ts                        # FAQ + FAQGroup interfaces
+│   ├── gallery.ts                    # GalleryItem + BeforeAfter interfaces
+│   └── form.ts                       # AppointmentFormData interface
+│
+│
+└── ── UTILS ────────────────────────────────────────────────────
+
+    utils/
+    ├── seo.ts                        # generateSeoMeta() helper per page
+    ├── schema.ts                     # JSON-LD schema builder helpers
+    └── format.ts                     # Phone formatting, date helpers
+
+
+════════════════════════════════════════════════════════════════
+PUBLIC DIRECTORY
+════════════════════════════════════════════════════════════════
+
+public/
+├── favicon.ico
+├── robots.txt                        # Managed by @nuxtjs/seo
+├── sitemap.xml                       # Auto-generated by @nuxtjs/seo
+└── gallery/
+    ├── braces/
+    │   ├── braces-ba-1-before.webp
+    │   ├── braces-ba-1-after.webp
+    │   ├── braces-ba-2-before.webp
+    │   └── braces-ba-2-after.webp
+    ├── whitening/
+    │   ├── whitening-ba-1-before.webp
+    │   ├── whitening-ba-1-after.webp
+    │   └── whitening-ba-2-before.webp
+    │   └── whitening-ba-2-after.webp
+    ├── implants/
+    │   ├── implants-ba-1-before.webp
+    │   └── implants-ba-1-after.webp
+    └── veneers/
+        ├── veneers-ba-1-before.webp
+        └── veneers-ba-1-after.webp
+
+
+════════════════════════════════════════════════════════════════
+FILE COUNT SUMMARY
+════════════════════════════════════════════════════════════════
+
+  Root config files            8
+  Assets (CSS + images + SVG) 28
+  Components                  42
+  Pages                        9
+  Layouts                      2
+  Composables                  4
+  Server (API + middleware)    2
+  Data files                   5
+  Types                        6
+  Utils                        3
+  Public (static assets)      15+
+
+  TOTAL SOURCE FILES          ~124
+
+════════════════════════════════════════════════════════════════
+ENVIRONMENT VARIABLES
+════════════════════════════════════════════════════════════════
+
+  # .env.example
+
+  # Resend email API
+  RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
+  RESEND_FROM_EMAIL=noreply@plazadental.co.ke
+  RESEND_TO_EMAIL=bookings@plazadental.co.ke
+
+  # Site
+  NUXT_PUBLIC_SITE_URL=https://www.plazadental.co.ke
+  NUXT_PUBLIC_SITE_NAME=Plaza Dental Clinic
+
+  # Analytics
+  NUXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+
+  # WhatsApp
+  NUXT_PUBLIC_WHATSAPP_NUMBER=254XXXXXXXXX
+
+  # Cookie
+  NUXT_PUBLIC_COOKIE_CONSENT_VERSION=1
+
+════════════════════════════════════════════════════════════════
+NUXT CONFIG MODULES
+════════════════════════════════════════════════════════════════
+
+  @nuxtjs/seo          → sitemap, robots, og meta, schema.org
+  @nuxt/image          → WebP optimisation, lazy loading
+  @nuxtjs/fontaine     → Self-hosted Inter font (zero CLS)
+  @nuxtjs/tailwindcss  → Tailwind v4 integration
+  @vueuse/nuxt         → useStorage (cookie consent), useIntersectionObserver
+
+════════════════════════════════════════════════════════════════
+END OF FILE

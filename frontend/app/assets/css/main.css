@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --pd-primary: #0D3D38;
+    --pd-primary-dark: #082B27;
+    --pd-primary-mid: #1A5C55;
+    --pd-primary-light: #E6F4F2;
+    
+    --pd-accent: #2BB5A0;
+    --pd-accent-hover: #229E8C;
+    --pd-accent-light: #C8EDE9;
+    
+    /* Neutrals */
+    --pd-white: #FFFFFF;
+    --pd-off-white: #F8FAFA;
+    --pd-neutral-50: #F2F5F5;
+    --pd-neutral-100: #E4EAEA;
+    --pd-neutral-200: #C5D2D2;
+    --pd-neutral-400: #7A9898;
+    --pd-neutral-600: #4A6464;
+    --pd-neutral-800: #1E3434;
+    --pd-neutral-900: #0F1F1F;
+    
+    /* Spacing */
+    --pd-spacing-section: 80px;
+    --pd-spacing-component: 24px;
+    --pd-spacing-container: 1200px;
+    
+    /* Radius */
+    --pd-radius-sm: 8px;
+    --pd-radius-md: 12px;
+    --pd-radius-lg: 16px;
+    --pd-radius-xl: 24px;
+    --pd-radius-2xl: 32px;
+    
+    /* Shadows */
+    --pd-shadow-card: 0 4px 12px rgba(13, 61, 56, 0.08);
+    --pd-shadow-elevated: 0 8px 32px rgba(13, 61, 56, 0.12);
+    --pd-shadow-premium: 0 16px 48px rgba(13, 61, 56, 0.16);
+  }
+
+  body {
+    @apply bg-pd-off-white text-pd-neutral-800 font-sans antialiased;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-pd-neutral-900 font-bold leading-tight;
+  }
+
+  h1 { @apply text-5xl lg:text-6xl; }
+  h2 { @apply text-4xl lg:text-5xl; }
+  h3 { @apply text-2xl lg:text-3xl; }
+}
+
+@layer components {
+  .container-pd {
+    @apply max-w-container mx-auto px-4;
+  }
+  
+  .section-py {
+    @apply py-12 lg:py-24;
+  }
+  
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .prose {
+    @apply text-pd-neutral-800 leading-relaxed max-w-none;
+  }
+  
+  .prose h2 { @apply text-2xl font-heading font-bold mb-4 mt-8; }
+  .prose p { @apply mb-4; }
+  
+  .card-luxury {
+    @apply bg-white p-8 rounded-2xl border border-pd-neutral-100 shadow-card hover:shadow-elevated transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

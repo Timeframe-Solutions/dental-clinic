@@ -1,0 +1,225 @@
+===== project-brief.txt =====
+
+PROJECT BRIEF
+Plaza Dental Clinic — Premium Dental Website
+Prepared by: Timeframe Solutions
+Version: 1.0
+
+════════════════════════════════════════════════════════════════
+1. EXECUTIVE SUMMARY
+════════════════════════════════════════════════════════════════
+
+Plaza Dental Clinic is a premium dental practice based in Nairobi, Kenya. This project
+delivers a conversion-optimised, trust-anchored marketing website designed to generate
+appointment requests and WhatsApp inquiries from Nairobi residents seeking quality
+dental care.
+
+The website is NOT a patient portal. It is a lead-generation platform — every page,
+section, and call-to-action is designed to move visitors toward booking an appointment
+or initiating a WhatsApp conversation.
+
+Selling Price:    KSh 75,000
+Build Time:       3–4 days
+Delivery:         7 days
+Stack:            Nuxt 4 · TypeScript · Tailwind CSS · Resend · Vercel
+
+════════════════════════════════════════════════════════════════
+2. BUSINESS GOALS
+════════════════════════════════════════════════════════════════
+
+PRIMARY
+  ① Generate qualified appointment requests via the booking form
+  ② Generate WhatsApp leads via the floating CTA button
+  ③ Rank on Google for Nairobi dental search terms within 90 days
+
+SECONDARY
+  ④ Build online credibility and social proof for new patients
+  ⑤ Showcase specialist services (Implants, Braces, Whitening)
+  ⑥ Reduce front-desk load by answering FAQs on the site
+
+SUCCESS METRICS (90-day targets)
+  • ≥ 30 appointment form submissions/month
+  • ≥ 50 WhatsApp clicks/month
+  • Top-5 Google ranking for "dental clinic Nairobi"
+  • Bounce rate < 55%
+  • Average session duration > 2 minutes
+
+════════════════════════════════════════════════════════════════
+3. USER GOALS
+════════════════════════════════════════════════════════════════
+
+WHAT VISITORS NEED
+  • Quickly assess whether Plaza Dental is credible and trustworthy
+  • Understand which services are offered and what they cost (range)
+  • See real results (before/after gallery, testimonials)
+  • Book an appointment with minimum friction
+  • Get directions / confirm location
+
+USER ANXIETIES TO RESOLVE ON-SITE
+  • "Are the doctors qualified?"           → Team section + credentials
+  • "Is it going to be painful?"           → Reassuring copy + gentle imagery
+  • "Is it affordable?"                    → Transparent pricing signals
+  • "Are they responsive?"                 → WhatsApp button + opening hours
+
+════════════════════════════════════════════════════════════════
+4. TARGET AUDIENCE
+════════════════════════════════════════════════════════════════
+
+SEGMENT A — FAMILIES
+  Demographics:  Parents 30–50, Nairobi suburbs (Karen, Westlands, Kilimani)
+  Motivation:    Safe, gentle care for children and adults under one roof
+  Device:        Mobile-first (WhatsApp-native)
+  Key message:   "Trusted dental care for every generation"
+
+SEGMENT B — YOUNG PROFESSIONALS
+  Demographics:  25–38, employed/self-employed, cosmetic-curious
+  Motivation:    Whitening, braces, smile aesthetics
+  Device:        Mobile + desktop (Instagram referral traffic)
+  Key message:   "Premium results. Comfortable experience."
+
+SEGMENT C — CORPORATE CLIENTS
+  Demographics:  HR managers, SME owners seeking corporate dental packages
+  Motivation:    Staff dental benefits, bulk bookings
+  Device:        Desktop
+  Key message:   "Corporate dental packages available — contact us"
+
+SEGMENT D — COSMETIC DENTISTRY PATIENTS
+  Demographics:  30–55, high-income, aesthetics-driven
+  Motivation:    Implants, veneers, full smile makeovers
+  Device:        Desktop + mobile
+  Key message:   "Nairobi's premier cosmetic dental studio"
+
+════════════════════════════════════════════════════════════════
+5. CONVERSION GOALS (FUNNEL)
+════════════════════════════════════════════════════════════════
+
+AWARENESS     → Google search / referral → land on Home
+INTEREST      → Services + Gallery → validate quality
+DESIRE        → Testimonials + Team → build trust
+ACTION        → Appointment form OR WhatsApp CTA
+
+MICRO-CONVERSIONS
+  • Clicking a service card
+  • Viewing the gallery lightbox
+  • Scrolling past the hero (engagement)
+  • Clicking opening hours / phone number
+
+MACRO-CONVERSIONS
+  • Submitting the appointment request form
+  • Clicking the WhatsApp floating button
+
+════════════════════════════════════════════════════════════════
+6. KEY SELLING POINTS
+════════════════════════════════════════════════════════════════
+
+  ✓ Experienced, qualified dental team
+  ✓ Modern clinic with advanced equipment
+  ✓ Full spectrum of services (general → cosmetic → surgical)
+  ✓ Comfortable, anxiety-free environment
+  ✓ Transparent pricing — no hidden fees
+  ✓ Convenient Nairobi CBD / Westlands location
+  ✓ WhatsApp-friendly booking process
+  ✓ Before & after gallery with real patient results
+
+════════════════════════════════════════════════════════════════
+7. COMPETITOR POSITIONING
+════════════════════════════════════════════════════════════════
+
+TYPICAL NAIROBI DENTAL CLINIC WEBSITE WEAKNESSES
+  • Outdated design, poor mobile experience
+  • No gallery or social proof
+  • No online booking capability
+  • Slow load times (unoptimized images)
+  • Weak or no SEO metadata
+
+PLAZA DENTAL DIFFERENTIATION
+  • Premium design on par with international clinics
+  • Mobile-first, WhatsApp-integrated booking
+  • Before/after gallery (trust proof)
+  • SEO-optimised from day one
+  • Fast Vercel CDN delivery (Core Web Vitals pass)
+
+POSITIONING STATEMENT
+  "Plaza Dental Clinic is Nairobi's most trusted modern dental practice —
+  combining clinical excellence with a warm, patient-centred approach
+  and the convenience of WhatsApp booking."
+
+════════════════════════════════════════════════════════════════
+8. SEO STRATEGY
+════════════════════════════════════════════════════════════════
+
+PRIMARY KEYWORDS (by page)
+  Home:            "Dental Clinic Nairobi", "Best Dentist Nairobi"
+  Services:        "Dental Services Nairobi", "Affordable Dentist Nairobi"
+  Dental Implants: "Dental Implants Nairobi", "Tooth Implants Nairobi"
+  Braces:          "Braces Nairobi", "Orthodontist Nairobi"
+  About:           "Plaza Dental Clinic Nairobi"
+  Contact:         "Book Dentist Nairobi", "Dental Appointment Nairobi"
+
+ON-PAGE SEO REQUIREMENTS
+  • Unique <title> and meta description per page
+  • H1 containing primary keyword on every page
+  • Schema markup: LocalBusiness, Dentist, MedicalOrganization
+  • Open Graph tags for social sharing
+  • Sitemap.xml auto-generated (Nuxt SEO)
+  • robots.txt configured
+  • Google Analytics 4 + Google Search Console
+  • Image alt text on all photos
+
+LOCAL SEO
+  • NAP (Name, Address, Phone) consistent across site and footer
+  • Google Maps embed on Contact page
+  • LocalBusiness JSON-LD schema on Home + Contact
+
+════════════════════════════════════════════════════════════════
+9. TECHNICAL REQUIREMENTS
+════════════════════════════════════════════════════════════════
+
+FRAMEWORK       Nuxt 4 (app/ directory structure)
+LANGUAGE        TypeScript 5
+STYLING         Tailwind CSS v4
+FORMS           Resend API via server/api/contact.post.ts
+DEPLOYMENT      Vercel (auto-deploy from GitHub main)
+SEO MODULE      @nuxtjs/seo (sitemap, robots, og, schema)
+ANALYTICS       Google Analytics 4 (via useHead / gtag)
+IMAGES          Nuxt Image (@nuxt/image) — WebP optimisation
+FONTS           Google Fonts (Inter) — self-hosted via @nuxtjs/fontaine
+
+PERFORMANCE TARGETS
+  • Lighthouse Performance  ≥ 90
+  • Lighthouse SEO          ≥ 95
+  • Lighthouse Accessibility ≥ 90
+  • LCP                     < 2.5s
+  • CLS                     < 0.1
+  • FID                     < 100ms
+
+HOSTING CONFIGURATION
+  • Vercel Edge Network (global CDN)
+  • Environment variables: RESEND_API_KEY, NUXT_PUBLIC_SITE_URL,
+    NUXT_PUBLIC_GA_ID, NUXT_PUBLIC_WHATSAPP_NUMBER
+  • Preview deployments for staging
+
+════════════════════════════════════════════════════════════════
+10. FUTURE EXPANSION OPPORTUNITIES
+════════════════════════════════════════════════════════════════
+
+PHASE 2 (within 6 months)
+  • Patient portal with appointment management (PatientFlow pattern)
+  • Online payment for consultations (M-Pesa Daraja integration)
+  • Blog/articles for SEO content marketing
+  • Live chat widget (Tawk.to or Crisp)
+
+PHASE 3 (12+ months)
+  • Multi-branch location pages
+  • Loyalty/referral programme landing page
+  • Video testimonials integration
+  • Corporate dental package quote generator
+
+AGENCY TEMPLATE VALUE
+  This project is architected as a reusable Timeframe Solutions dental
+  template. With design token swaps and content replacement, it can be
+  resold to additional dental/medical clients at KSh 60,000–75,000/project
+  with a 1-day turnaround after the first build.
+
+════════════════════════════════════════════════════════════════
+END OF FILE
