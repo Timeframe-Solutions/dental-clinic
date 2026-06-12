@@ -40,7 +40,7 @@ onMounted(() => {
         <!-- Logo -->
         <NuxtLink to="/" class="relative z-[90] shrink-0">
           <img
-            :src="isScrolled ? '/images/logo.svg' : '/images/logo-white.svg'"
+            :src="isScrolled || $route.path === '/' ? '/images/logo.svg' : '/images/logo-white.svg'"
             alt="Plaza Dental Clinic"
             class="h-9 lg:h-10 w-auto transition-all duration-300"
           />
@@ -54,7 +54,7 @@ onMounted(() => {
             :to="link.path"
             active-class="!font-semibold after:absolute after:bottom-1 after:left-3 after:right-3 after:h-0.5 after:bg-pd-accent after:rounded-full"
             :class="
-              isScrolled
+              isScrolled || $route.path === '/'
                 ? [
                     'text-pd-neutral-800 hover:text-pd-primary hover:bg-pd-primary/5',
                     $route.path === link.path ? '!text-pd-primary' : ''
@@ -81,7 +81,7 @@ onMounted(() => {
             href="tel:+254700000000"
             class="hidden lg:flex items-center gap-2 text-sm font-semibold transition-all duration-200 px-3 py-2 rounded-xl"
             :class="
-              isScrolled
+              isScrolled || $route.path === '/'
                 ? 'text-pd-neutral-600 hover:bg-pd-neutral-100'
                 : 'text-white/80 hover:bg-white/12'
             "
